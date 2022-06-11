@@ -2,7 +2,7 @@
 
 A Simple Matrix Library
 
-author: Muhammad Rowaha
+author: Muhammad Rowaha <br />
 date of creation: 11-07-2022
 
 ---
