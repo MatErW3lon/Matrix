@@ -148,6 +148,42 @@ public class Matrix{
             return null;
         }
     }
+    
+        public Matrix flattenRowMajor(){
+        try{
+            Matrix answer = new Matrix(1, matrix.length * matrix[0].length);
+            final int ansRowPtr = 0;
+            int ansColPtr = 0;
+            for(int i = 0; i < matrix.length; i++){
+                for(int j = 0; j < matrix[0].length; j++){
+                    answer.matrix[ansRowPtr][ansColPtr] = matrix[i][j];
+                    ansColPtr++;
+                }
+            }
+            return answer;
+        }catch(IllegalBoundsException illegalBoundsException){
+            illegalBoundsException.printStackTrace();
+            return null;
+        }
+    }
+
+    public Matrix flattenColumnMajor(){
+        try{
+            Matrix answer = new Matrix(matrix.length * matrix[0].length, 1);
+            final int ansColPtr = 0;
+            int ansRowPtr = 0;
+            for(int i = 0; i < matrix.length; i++){
+                for(int j = 0; j < matrix[0].length; j++){
+                    answer.matrix[ansRowPtr][ansColPtr] = matrix[i][j];
+                    ansRowPtr++;
+                }
+            }
+            return answer;
+        }catch(IllegalBoundsException illegalBoundsException){
+            illegalBoundsException.printStackTrace();
+            return null;
+        }
+    }
 
     public String getSize(){
         String buildSizeString = matrix.length + " x " + matrix[0].length;
