@@ -12,3 +12,5 @@ date of creation: 11-07-2022
 2. Subtract Two Matrices
 3. Scalar Multiplication(in place/new matrix)
 4. Transpose
+5. Flatten(row major/ column major)
+```
